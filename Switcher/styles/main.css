@@ -1,0 +1,101 @@
+.body {
+  font-family: Tahoma;
+}
+.winamp {
+  width: 810px;
+  margin: 0 auto;
+}
+.top,
+.middle,
+.bottom {
+  width: 809px;
+}
+.top {
+  background: url('/images/top.png');
+  height: 345px;
+  position: relative;
+}
+.top .timer-left {
+  position: absolute;
+  right: 540px;
+  top: 68px;
+  color: #00E100;
+  font-size: 40px;
+  font-family: Tahoma;
+}
+.top .track-name {
+  top: 76px;
+  font-size: 28px;
+  line-height: 1.1em;
+  position: absolute;
+  background: #000;
+  width: 454px;
+  left: 328px;
+  height: 32px;
+  color: #0eac11;
+  overflow: hidden;
+}
+.top .progress {
+  top: 218px;
+  position: absolute;
+  left: 60px;
+  width: 712px;
+  background: none;
+}
+.top .progress .bar {
+  height: 20px;
+  background: #0eac11;
+}
+.top .buttons-panel {
+  position: absolute;
+  left: 50px;
+  top: 261px;
+  width: 329px;
+  height: 51px;
+}
+.top .buttons-panel .item {
+  float: left;
+  width: 64px;
+  height: 51px;
+  background: url('/images/panel.png') no-repeat;
+  cursor: pointer;
+}
+.top .buttons-panel .item__1 {
+  background-position: 0px 0px;
+}
+.top .buttons-panel .item__2 {
+  background-position: -64px 0px;
+}
+.top .buttons-panel .item__3 {
+  background-position: -128px 0px;
+}
+.top .buttons-panel .item__4 {
+  background-position: -192px 0px;
+}
+.top .buttons-panel .item__5 {
+  background-position: -256px 0px;
+  width: 73px;
+}
+.middle {
+  background: url('/images/middle.png') repeat-y;
+  height: 341px;
+}
+.bottom {
+  background: url('/images/bottom-top.png') no-repeat;
+  height: 340px;
+  padding-top: 60px;
+}
+.bottom .task-info {
+  background: url('/images/bottom-middle.png') repeat-y 0px 0px;
+  color: #0eac11;
+  padding-left: 40px;
+  padding-right: 67px;
+  font-size: 35px;
+}
+.bottom .task-info.active {
+  color: #fff;
+}
+.bottom .bottom-bottom {
+  height: 112px;
+  background: url('/images/bottom-bottom.png') repeat-y;
+}

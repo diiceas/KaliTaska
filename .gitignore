@@ -1,2 +1,11 @@
-/Switcher/bin
-/Switcher/obj
+node_modules
+dist
+.tmp
+.sass-cache
+.idea/
+app/bower_components
+Switcher/bin/
+Switcher/obj/
+Switcher/bower_components/
+app/
+Switcher.v12.suo
