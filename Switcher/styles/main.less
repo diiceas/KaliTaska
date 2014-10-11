@@ -1,5 +1,14 @@
 @imagesurl: '/images';
+@text-color: #0eac11;
 
+.body {
+  font-family: Tahoma;
+}
+
+.winamp {
+  width: 810px;
+  margin: 0 auto;
+}
 .top, .middle, .bottom{
 	width: 809px;
 }
@@ -9,17 +18,39 @@
 	height: 345px;
 	position: relative;
 
-	.timer-left{
-		position: absolute;
-		left: 90px;
-		top: 120px;
-		color: #00E100;
-		font-size: 50px;
-		font-weight: bold;
-		font-family: Tahoma;
-		text-shadow: 0px 0px 11px #008A00;
+	.timer-left {
+      position: absolute;
+      right: 540px;
+      top: 68px;
+      color: #00E100;
+      font-size: 40px;
+      font-family: Tahoma;
 	}
 
+  .track-name {
+    top: 76px;
+    font-size: 28px;
+    line-height: 1.1em;
+    position: absolute;
+    background: #000;
+    width: 454px;
+    left: 328px;
+    height: 32px;
+    color: @text-color;
+    overflow: hidden;
+  }
+
+  .progress {
+    top: 218px;
+    position: absolute;
+    left: 60px;
+    width: 712px;
+    background: none;
+    .bar {
+      height: 20px;
+      background: @text-color;
+    }
+  }
 	.buttons-panel{
 		position: absolute;
 		left: 50px;
@@ -32,7 +63,9 @@
 			width: 64px;
 			height: 51px;
 			background: url('@{imagesurl}/panel.png') no-repeat;
-			
+
+          cursor: pointer;
+
 			&__1{
 				background-position: 0px 0px;
 			}
@@ -71,12 +104,15 @@
 
 	.task-info{
 		background: url('@{imagesurl}/bottom-middle.png') repeat-y 0px 0px;
-		color: white;
+		color: @text-color;
 		padding-left: 40px;
 		padding-right: 67px;
 		font-size: 35px;
-		text-shadow: 0px 0px 11px #FFFFFF;
-		font-family: Tahoma;
+
+      &.active {
+        color: #fff;
+      }
+//		text-shadow: 0px 0px 11px #FFFFFF;
 	}
 
 	.bottom-bottom{

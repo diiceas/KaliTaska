@@ -1,97 +1,80 @@
+<div class="winamp">
+    <div class="top">
+        <div class="timer-left" time-format="player.time">
+            <span ng-if="hours">{{hours}}:</span>{{mminutes}}&nbsp;{{sseconds}}
+        </div>
+        <div class="track-name">
+            <marquee
+                    scrolldelay="10"
+                    scrollamount="4"
+                    behavior="scroll" ng-if="player.track">
+                - {{player.track.Name}} (<span time-format="player.track.DurationSecs"><span
+                    ng-if="hours">{{hours}}:</span>{{mminutes}}:{{sseconds}}</span>) -
+            </marquee>
+        </div>
+        <div class="progress">
+            <div class="bar" style="width: {{player.percent}}%"></div>
+        </div>
+        <div class="buttons-panel">
+            <div class="item item__1" ng-click="prev()"></div>
+            <div class="item item__2" ng-click="play()"></div>
+            <div class="item item__3" ng-click="stop()"></div>
+            <div class="item item__4"></div>
+            <div class="item item__5" ng-click="next()"></div>
+        </div>
+    </div>
+    <div class="middle"></div>
+    <div class="bottom">
+        <div ng-class="{active: track == player.track}" ng-repeat="track in playlist"
+             class="task-info in-play clearfix bottom-middle">
+            <div class="description pull-left">
+                {{$index+1}}. {{track.Name}}
+            </div>
+            <div time-format="track.DurationSecs" class="time pull-right">
+                <span ng-if="hours">{{hours}}:</span>{{mminutes}}:{{sseconds}}
+            </div>
+        </div>
+        <div class="bottom-bottom"></div>
+    </div>
+</div>
+
 <div class="container">
     <div class="row">
         <div class="col-md-3">
             <div ng-click="showDesc(track)" ng-repeat="track in playlist">
                 <b ng-if="track==player.track">{{track.Name}}</b>
+
                 <div ng-if="track!=player.track">{{track.Name}}</div>
             </div>
         </div>
         <div class="col-md-9">
-            <h1>
+            {{player.time}}
+            <h1 time-format="player.time">
                 {{hhours}}:{{mminutes}}:{{sseconds}}
             </h1>
+
             <p class="text-right">
                 <button class="btn btn-primary" ng-if="!player.state" ng-click="play()">Start</button>
                 <button class="btn btn-primary" ng-if="player.state" ng-click="stop()">Stop</button>
             </p>
+
             <div class="progress">
                 <div
-                    class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0"
-                    aria-valuemax="100"
-                    style="width: {{player.percent}}%"><span class="sr-only">45% Complete</span></div>
+                        class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        style="width: {{player.percent}}%"><span class="sr-only">45% Complete</span></div>
             </div>
             {{selectedTask}}
             <div ng-if="selectedTrack" class="desc">
                 <h2>
                     {{selectedTrack.Name}}
                 </h2>
+
                 <p>
                     {{selectedTrack.Descrition}}
                 </p>
             </div>
         </div>
     </div>
-</div>
-
-<div class="top">
-    <div class="timer-left">1:10:03</div>
-    <div class="buttons-panel">
-        <div class="item item__1"></div>
-        <div class="item item__2"></div>
-        <div class="item item__3"></div>
-        <div class="item item__4"></div>
-        <div class="item item__5"></div>
-    </div>
-</div>
-<div class="middle"></div>
-<div class="bottom">
-    <div class="task-info in-play clearfix bottom-middle">
-        <div class="description pull-left">
-            1. DJ Mike Liama - Liama Whippin'
-        </div>
-        <div class="time pull-right">
-            0:05
-        </div>
-    </div>
-    <div class="task-info in-play clearfix bottom-middle">
-        <div class="description pull-left">
-            2. DJ Mike Liama - Liama Whippin'
-        </div>
-        <div class="time pull-right">
-            0:05
-        </div>
-    </div>
-    <div class="task-info in-play clearfix bottom-middle">
-        <div class="description pull-left">
-            3. DJ Mike Liama - Liama Whippin'
-        </div>
-        <div class="time pull-right">
-            0:05
-        </div>
-    </div>
-    <div class="task-info in-play clearfix bottom-middle">
-        <div class="description pull-left">
-            4. DJ Mike Liama - Liama Whippin'
-        </div>
-        <div class="time pull-right">
-            0:05
-        </div>
-    </div>
-    <div class="task-info in-play clearfix bottom-middle">
-        <div class="description pull-left">
-            5. DJ Mike Liama - Liama Whippin'
-        </div>
-        <div class="time pull-right">
-            0:05
-        </div>
-    </div>
-    <div class="task-info in-play clearfix bottom-middle">
-        <div class="description pull-left">
-            6. DJ Mike Liama - Liama Whippin'
-        </div>
-        <div class="time pull-right">
-            0:05
-        </div>
-    </div>
-    <div class="bottom-bottom"></div>
 </div>

@@ -1,3 +1,10 @@
+.body {
+  font-family: Tahoma;
+}
+.winamp {
+  width: 810px;
+  margin: 0 auto;
+}
 .top,
 .middle,
 .bottom {
@@ -10,13 +17,34 @@
 }
 .top .timer-left {
   position: absolute;
-  left: 90px;
-  top: 120px;
+  right: 540px;
+  top: 68px;
   color: #00E100;
-  font-size: 50px;
-  font-weight: bold;
+  font-size: 40px;
   font-family: Tahoma;
-  text-shadow: 0px 0px 11px #008A00;
+}
+.top .track-name {
+  top: 76px;
+  font-size: 28px;
+  line-height: 1.1em;
+  position: absolute;
+  background: #000;
+  width: 454px;
+  left: 328px;
+  height: 32px;
+  color: #0eac11;
+  overflow: hidden;
+}
+.top .progress {
+  top: 218px;
+  position: absolute;
+  left: 60px;
+  width: 712px;
+  background: none;
+}
+.top .progress .bar {
+  height: 20px;
+  background: #0eac11;
 }
 .top .buttons-panel {
   position: absolute;
@@ -30,6 +58,7 @@
   width: 64px;
   height: 51px;
   background: url('/images/panel.png') no-repeat;
+  cursor: pointer;
 }
 .top .buttons-panel .item__1 {
   background-position: 0px 0px;
@@ -58,12 +87,13 @@
 }
 .bottom .task-info {
   background: url('/images/bottom-middle.png') repeat-y 0px 0px;
-  color: white;
+  color: #0eac11;
   padding-left: 40px;
   padding-right: 67px;
   font-size: 35px;
-  text-shadow: 0px 0px 11px #FFFFFF;
-  font-family: Tahoma;
+}
+.bottom .task-info.active {
+  color: #fff;
 }
 .bottom .bottom-bottom {
   height: 112px;
