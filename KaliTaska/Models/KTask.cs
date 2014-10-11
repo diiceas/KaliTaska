@@ -65,7 +65,9 @@ namespace KaliTaska.Models {
         }
         // If we show next available tasks (for children)
         public bool ShowNext { get; set; }
-        public virtual bool HasChildren {
+
+        public bool ShowNotification { get; set; }
+        public bool HasChildren {
             get {
                 return (Tasks != null && Tasks.Count > 0);
             }

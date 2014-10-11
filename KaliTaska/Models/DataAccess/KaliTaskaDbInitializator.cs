@@ -10,39 +10,46 @@ namespace KaliTaska.Models.DataAccess {
             base.Seed(context);
             var task1 = new KTask {
                 Id = 1,
-                Name = "Billy Tasks",
-                Description = "Container for my future tasks!",
+                Name = "Start Presentation",
+                Description = "Start Presentation on Kalitaska software",
                 Start = DateTime.Now,
-                DurationSecs = 3600,
-                Tasks = new List<KTask> {
+                 Tasks = new List<KTask> {
                     new KTask {
                         Id = 2,
-                        Name = "Rule the world",
-                        Description = "Wann rule u all, sux0rz!",
+                        Name = "Introduction",
+                        Description = "Intrdouctions. Short review of the concept.",
                         Start = DateTime.Now,
-                        DurationSecs = 450,
+                        DurationSecs = 120,
                    },
                    new KTask {
                         Id = 3,
-                        Name = "Be cool",
-                        Description = "Rule the world with the cool face!",
-                        Start = DateTime.Now,
-                        DurationSecs = 725,
+                        Name = "Say something awesome",
+                        Description = "Now say something cool to own them!",
+                        Start = DateTime.Now.AddSeconds(120),
+                        DurationSecs = 200,
+                        ShowNotification = true
+                   },
+                   new KTask {
+                        Id = 4,
+                        Name = "Be cool!",
+                        Description = "Just Do It!",
+                        Start = DateTime.Now.AddSeconds(320),
+                        DurationSecs = 200,
                    }
                 }
             };
 
             var task2 = new KTask {
-                Id = 2,
+                Id = 5,
                 Name = "Rule the world",
-                Description = "Wann rule u all, sux0rz!",
+                Description = "Rule it!",
                 Start = DateTime.Now,
                 DurationSecs = 450,
             };
 
             var playList = new PlayList {
                 Id = 1,
-                Name = "Billy's List",
+                Name = "Kalilaska Presentaion List",
                 Tasks = new KTask[] { task1 }
             };
 

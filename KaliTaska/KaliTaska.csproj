@@ -164,6 +164,7 @@
     <Compile Include="Models\DataAccess\KaliTaskaContext.cs" />
     <Compile Include="Models\DataAccess\KaliTaskaDbInitializator.cs" />
     <Compile Include="Models\KTask.cs" />
+    <Compile Include="Models\NotificationService.cs" />
     <Compile Include="Models\PlayList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
