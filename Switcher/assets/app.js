@@ -1,5 +1,20 @@
 'use strict';
 
+angular.module('switcher', ['ngSanitize', 'ngResource', 'ui.router', 'angularMoment', 'timer', 'angular-chrono'])
+  .config(function ($stateProvider, $urlRouterProvider) {
+    $stateProvider
+      .state('home', {
+        url: '/',
+        templateUrl: 'partials/main.html',
+        controller: 'MainCtrl'
+      });
+
+    $urlRouterProvider.otherwise('/');
+  })
+;
+
+'use strict';
+
 angular.module('switcher')
     .controller('MainCtrl', function ($scope, $interval, chronoService) {
         var TICK = 1000,
