@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('switcher')
-    .controller('MainCtrl', function ($scope, $interval, Player) {
+    .controller('MainCtrl', function ($scope, ngAudio, $interval, Player) {
         var TICK = 1000,
             player = $scope.player = new Player();
 
@@ -27,6 +27,14 @@ angular.module('switcher')
                 },
                 stop: function() {
                     player.stopTrack();
+                },
+                selectTrack: function(track) {
+                    if ($scope.selectedTrack && $scope.selectedTrack == track) {
+                        $scope.selectedTrack = undefined;
+                    }
+                    else {
+                        $scope.selectedTrack = track;
+                    }
                 }
             }
         );
@@ -34,12 +42,17 @@ angular.module('switcher')
         function init() {
             $scope.STATE = $scope.DEFAULT;
             $scope.playlist = player.playlist;
+
+        }
+
+        $scope.win = function() {
+            $scope.isWin = true;
         }
         /*
         function startTrack() {
             player.time = player.time || player.track.DurationSecs;
 
-            
+
             stop = $interval(tick,
                 TICK / 100,
                 Math.round(player.time / 1000)

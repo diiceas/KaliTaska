@@ -1,4 +1,6 @@
-<div class="winamp">
+<button class="btn btn-primary" ng-click="win()">WIN</button>
+<div ng-class="{win: isWin}" class="winamp ">
+
     <div class="top">
         <div class="timer-left" time-format="player.time">
             <span ng-if="hours">{{hours}}:</span>{{mminutes}}&nbsp;{{sseconds}}
@@ -23,9 +25,21 @@
             <div class="item item__5" ng-click="next()"></div>
         </div>
     </div>
-    <div class="middle"></div>
+    <!--
+   <div class="middle">
+       <div ng-if="selectedTrack" class="desc">
+           <h2>
+               {{selectedTrack.Name}}
+           </h2>
+
+           <p>
+               {{selectedTrack.Descrition}}
+           </p>
+       </div>
+   </div>
+-->
     <div class="bottom">
-        <div ng-class="{active: track == player.track}" ng-repeat="track in playlist"
+        <div ng-click="selectTrack(track)" ng-class="{active: track == player.track}" ng-repeat="track in playlist"
              class="task-info in-play clearfix bottom-middle">
             <div class="description pull-left">
                 {{$index+1}}. {{track.Name}}
@@ -36,8 +50,10 @@
         </div>
         <div class="bottom-bottom"></div>
     </div>
+
 </div>
 
+<!--
 <div class="container">
     <div class="row">
         <div class="col-md-3">
@@ -78,3 +94,4 @@
         </div>
     </div>
 </div>
+        -->

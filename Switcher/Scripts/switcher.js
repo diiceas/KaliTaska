@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('switcher', ['ngSanitize', 'ngResource', 'ui.router', 'angularMoment', 'timer', 'angular-chrono'])
+angular.module('switcher', ['ngAudio', 'ngSanitize', 'ngResource', 'ui.router', 'angularMoment', 'timer', 'angular-chrono'])
   .config(function ($stateProvider, $urlRouterProvider) {
     $stateProvider
       .state('home', {

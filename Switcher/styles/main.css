@@ -11,9 +11,11 @@
   width: 809px;
 }
 .top {
-  background: url('/images/top.png');
   height: 345px;
   position: relative;
+}
+.win .top {
+  background: url('/images/top.png');
 }
 .top .timer-left {
   position: absolute;
@@ -77,25 +79,53 @@
   width: 73px;
 }
 .middle {
-  background: url('/images/middle.png') repeat-y;
   height: 341px;
+  position: relative;
+}
+.win .middle {
+  background: url('/images/middle.png') repeat-y;
+}
+.middle .desc {
+  width: 775px;
+  height: 285px;
+  position: absolute;
+  background: #181826;
+  left: 23px;
+  top: 44px;
+  padding: 10px 20px;
+  color: #0eac11;
 }
 .bottom {
-  background: url('/images/bottom-top.png') no-repeat;
   height: 340px;
   padding-top: 60px;
 }
+.win .bottom {
+  background: url('/images/bottom-top.png') no-repeat;
+}
 .bottom .task-info {
-  background: url('/images/bottom-middle.png') repeat-y 0px 0px;
   color: #0eac11;
   padding-left: 40px;
   padding-right: 67px;
   font-size: 35px;
+}
+.win .bottom .task-info {
+  background: url('/images/bottom-middle.png') repeat-y 0px 0px;
 }
 .bottom .task-info.active {
   color: #fff;
 }
 .bottom .bottom-bottom {
   height: 112px;
+}
+.win .bottom .bottom-bottom {
   background: url('/images/bottom-bottom.png') repeat-y;
+}
+.all-tracks-list {
+  background: #fff;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  color: #0eac11;
+  font-size: 30px;
 }
