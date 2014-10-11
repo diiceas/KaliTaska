@@ -1,12 +1,71 @@
-.browsehappy {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
+.top,
+.middle,
+.bottom {
+  width: 809px;
 }
-.thumbnail {
-  height: 200px;
+.top {
+  background: url('/images/top.png');
+  height: 345px;
+  position: relative;
 }
-.thumbnail img.pull-right {
-  width: 50px;
+.top .timer-left {
+  position: absolute;
+  left: 90px;
+  top: 120px;
+  color: #00E100;
+  font-size: 50px;
+  font-weight: bold;
+  font-family: Tahoma;
+  text-shadow: 0px 0px 11px #008A00;
+}
+.top .buttons-panel {
+  position: absolute;
+  left: 50px;
+  top: 261px;
+  width: 329px;
+  height: 51px;
+}
+.top .buttons-panel .item {
+  float: left;
+  width: 64px;
+  height: 51px;
+  background: url('/images/panel.png') no-repeat;
+}
+.top .buttons-panel .item__1 {
+  background-position: 0px 0px;
+}
+.top .buttons-panel .item__2 {
+  background-position: -64px 0px;
+}
+.top .buttons-panel .item__3 {
+  background-position: -128px 0px;
+}
+.top .buttons-panel .item__4 {
+  background-position: -192px 0px;
+}
+.top .buttons-panel .item__5 {
+  background-position: -256px 0px;
+  width: 73px;
+}
+.middle {
+  background: url('/images/middle.png') repeat-y;
+  height: 341px;
+}
+.bottom {
+  background: url('/images/bottom-top.png') no-repeat;
+  height: 340px;
+  padding-top: 60px;
+}
+.bottom .task-info {
+  background: url('/images/bottom-middle.png') repeat-y 0px 0px;
+  color: white;
+  padding-left: 40px;
+  padding-right: 67px;
+  font-size: 35px;
+  text-shadow: 0px 0px 11px #FFFFFF;
+  font-family: Tahoma;
+}
+.bottom .bottom-bottom {
+  height: 112px;
+  background: url('/images/bottom-bottom.png') repeat-y;
 }
