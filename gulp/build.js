@@ -22,8 +22,10 @@ gulp.task('styles', function () {
 
 gulp.task('scripts', function () {
   return gulp.src('Switcher/scripts/**/*.js')
-    .pipe($.jshint())
-    .pipe($.jshint.reporter('jshint-stylish'))
+      .pipe($.concat('app.js'))
+      .pipe(gulp.dest('Switcher/assets'))
+//    .pipe($.jshint())
+//    .pipe($.jshint.reporter('jshint-stylish'))
     .pipe($.size());
 });
 
