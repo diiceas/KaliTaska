@@ -10,7 +10,10 @@
     "bootstrap": "3.2.x",
     "angular-moment": "~0.8.2",
     "angular-timer": "~1.1.7",
-    "angular-chrono": "~0.0.4"
+    "angular-chrono": "~0.0.4",
+    "angular-ui-tree": "~2.1.5",
+    "ngDraggable": "*",
+    "angular-audio": "*"
   },
   "devDependencies": {
     "angular-mocks": "1.2.x"
