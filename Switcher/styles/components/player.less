@@ -1,0 +1,40 @@
+@player-image-path: '/images/player';
+
+.player {
+  position: relative;
+  min-height: 100%;
+  background: #ebebeb;
+  border-right: 1px solid #8d8d8d;
+
+  .playlist {
+    h1 {
+      margin-top: 40px;
+      font-size: 40px;
+    }
+
+    .actions {
+      & > * {
+        margin-right: 10px;
+        font-size: 10px;
+        color: #4a90e2;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .tracklist {
+
+    ul {
+      li {
+        padding: 10px 0 10px 80px;
+        color: #4a4a4a;
+        font-size: 14px;
+
+        background: url("@{player-image-path}/unchecked.jpg") no-repeat 30px 10px;
+        .desc {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}

@@ -1,122 +1,196 @@
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+}
+.navbar-inverse {
+  height: 60px;
+  background: #2b2b2b;
+}
+.main {
+  padding-top: 60px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.main > .row {
+  height: 100%;
+}
+.player {
+  position: relative;
+  min-height: 100%;
+  background: #ebebeb;
+  border-right: 1px solid #8d8d8d;
+}
+.player .playlist h1 {
+  margin-top: 40px;
+  font-size: 40px;
+}
+.player .playlist .actions > * {
+  margin-right: 10px;
+  font-size: 10px;
+  color: #4a90e2;
+  cursor: pointer;
+}
+.player .tracklist ul li {
+  padding: 10px 0 10px 80px;
+  color: #4a4a4a;
+  font-size: 14px;
+  background: url("/images/player/unchecked.jpg") no-repeat 30px 10px;
+}
+.player .tracklist ul li .desc {
+  font-size: 12px;
+}
+/*
 .body {
   font-family: Tahoma;
 }
+
 .winamp {
   width: 810px;
   margin: 0 auto;
 }
+.top, .middle, .bottom{
+	width: 809px;
+}
 
-.top {
-  background: url('/images/top.png');
-  height: 345px;
-  position: relative;
+.top{
+  .win & {
+  	background: url('@{imagesurl}/top.png');
 }
-.top .timer-left {
-  position: absolute;
-  right: 540px;
-  top: 68px;
-  color: #00E100;
-  font-size: 40px;
-  font-family: Tahoma;
-}
-.top .track-name {
-  top: 76px;
-  font-size: 28px;
-  line-height: 1.1em;
-  position: absolute;
-  background: #000;
-  width: 454px;
-  left: 328px;
-  height: 32px;
-  color: #0eac11;
-  overflow: hidden;
-}
-.top .progress {
-  top: 218px;
-  position: absolute;
-  left: 60px;
-  width: 712px;
-  background: none;
-}
-.top .progress .bar {
-  height: 20px;
-  background: #0eac11;
-}
-.top .buttons-panel {
-  position: absolute;
-  left: 50px;
-  top: 261px;
-  width: 329px;
-  height: 51px;
-}
-.top .buttons-panel .item {
-  float: left;
-  width: 64px;
-  height: 51px;
-  background: url('/images/panel.png') no-repeat;
-  cursor: pointer;
-}
-.top .buttons-panel .item__1 {
-  background-position: 0px 0px;
-}
-.top .buttons-panel .item__2 {
-  background-position: -64px 0px;
-}
-.top .buttons-panel .item__3 {
-  background-position: -128px 0px;
-}
-.top .buttons-panel .item__4 {
-  background-position: -192px 0px;
-}
-.top .buttons-panel .item__5 {
-  background-position: -256px 0px;
-  width: 73px;
-}
-.middle {
-  background: url('/images/middle.png') repeat-y;
-  height: 341px;
-  position: relative;
-  
+	height: 345px;
+	position: relative;
 
-  &>div{
-    padding-right: 20px;
-    font-size: 32px;
-    font-weight: bold;
+	.timer-left {
+      position: absolute;
+      right: 540px;
+      top: 68px;
+      color: #00E100;
+      font-size: 40px;
+      font-family: Tahoma;
+	}
+
+  .track-name {
+    top: 76px;
+    font-size: 28px;
+    line-height: 1.1em;
     position: absolute;
-    left: 230px;
-    top: 130px;
-    color: #00E100;
-    line-height: 1.4em;
-    text-shadow: 0px 0px 11px #008A00;
-    span{
-      color: #ADB4C4;
-      font-size: 23px;
-      text-shadow: 0px 0px 11px #383859;
-      font-weight: normal;
-    }
+    background: #000;
+    width: 454px;
+    left: 328px;
+    height: 32px;
+    color: @text-color;
+    overflow: hidden;
+  }
 
-    .name{
-      float: left;
-      margin-right: 20px;
+  .progress {
+    top: 218px;
+    position: absolute;
+    left: 60px;
+    width: 712px;
+    background: none;
+    .bar {
+      height: 20px;
+      background: @text-color;
     }
   }
+	.buttons-panel{
+		position: absolute;
+		left: 50px;
+		top: 261px;
+		width: 329px;
+		height: 51px;
+		
+		.item{
+			float: left;
+			width: 64px;
+			height: 51px;
+			background: url('@{imagesurl}/panel.png') no-repeat;
+
+          cursor: pointer;
+
+			&__1{
+				background-position: 0px 0px;
+			}
+
+			&__2{
+				background-position: -64px 0px;
+			}
+
+			&__3{
+				background-position: -128px 0px;
+
+			}
+
+			&__4{
+				background-position: -192px 0px;
+			}
+
+			&__5{
+				
+				background-position: -256px 0px;
+				width:73px;
+			}
+		}
+	}
 }
-.bottom {
-  background: url('/images/bottom-top.png') no-repeat;
+
+.middle{
+  .win & {
+	background: url('@{imagesurl}/middle.png') repeat-y;
+  }
+	height: 341px;
+  position: relative;
+  .desc {
+    width: 775px;
+    height: 285px;
+    position: absolute;
+    background: #181826;
+    left: 23px;
+    top: 44px;
+    padding: 10px 20px;
+    color: @text-color;
+  }
+}
+
+.bottom{
+  .win & {
+    	background: url('@{imagesurl}/bottom-top.png') no-repeat;
+  }
   height: 340px;
-  padding-top: 60px;
+	padding-top: 60px;
+
+	.task-info{
+      .win & {
+        		background: url('@{imagesurl}/bottom-middle.png') repeat-y 0px 0px;
+      }
+		color: @text-color;
+		padding-left: 40px;
+		padding-right: 67px;
+		font-size: 35px;
+
+      &.active {
+        color: #fff;
+      }
+	}
+
+	.bottom-bottom{
+		height: 112px;
+      .win & {
+        		background: url('@{imagesurl}/bottom-bottom.png') repeat-y;
+      }
+	}
 }
-.bottom .task-info {
-  background: url('/images/bottom-middle.png') repeat-y 0px 0px;
-  color: #0eac11;
-  padding-left: 40px;
-  padding-right: 67px;
-  font-size: 35px;
-}
-.bottom .task-info.active {
-  color: #fff;
-}
-.bottom .bottom-bottom {
-  height: 112px;
-  background: url('/images/bottom-bottom.png') repeat-y;
-}
+
+.all-tracks-list {
+  background: #fff;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+  color: @text-color;
+  font-size: 30px;
+}*/
